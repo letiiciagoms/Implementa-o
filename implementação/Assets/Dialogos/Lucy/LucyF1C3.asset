@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3d711f70ea36b34a8451f3815d5a8b0, type: 3}
+  m_Name: LucyF1C3
+  m_EditorClassIdentifier: 
+  sentences:
+  - "Yuna, voc\xEA chegou \xE0 parte mais sagrada da floresta."
+  - "Ali est\xE1 o Templo de Afrodite, onde o primeiro elemento da espada Puro Sangue
+    est\xE1 guardado."
+  - "Mas aten\xE7\xE3o: para ter acesso ao elemento e desbloquear a pr\xF3xima fase,
+    voc\xEA precisar\xE1 oferecer oferendas \xE0 deusa."
+  - "Dizem que Afrodite gosta de rosas\u2026 talvez elas sejam a chave para o seu
+    sucesso."
+  - "Re\xFAna 4 flores e fa\xE7a sua oferenda com cuidado e respeito no templo."
+  - "Somente assim voc\xEA poder\xE1 coletar o primeiro elemento e continuar a jornada
+    rumo \xE0 recupera\xE7\xE3o do trono de Chromia."
+  - "O destino de seu povo depende de voc\xEA, Yuna. Confio em sua coragem e sabedoria."

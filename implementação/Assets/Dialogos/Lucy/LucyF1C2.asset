@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3d711f70ea36b34a8451f3815d5a8b0, type: 3}
+  m_Name: LucyF1C2
+  m_EditorClassIdentifier: 
+  sentences:
+  - "Yuna, vejo que voc\xEA se preparou bem para a jornada."
+  - "Agora voc\xEA precisa atravessar o grande rio que bloqueia o caminho."
+  - "No meio da floresta, h\xE1 uma craft m\xE1gica capaz de construir uma ponte."
+  - "Para us\xE1-la, voc\xEA precisar\xE1 ter no seu invent\xE1rio dois troncos e
+    duas cordas."
+  - "Sem esses itens, a ponte n\xE3o poder\xE1 ser constru\xEDda e voc\xEA n\xE3o
+    conseguir\xE1 avan\xE7ar."
+  - "Procure bem na floresta e junte os materiais necess\xE1rios."
+  - "Quando tiver tudo, encontre a craft m\xE1gica e construa a ponte."
+  - "S\xF3 assim voc\xEA poder\xE1 atravessar o rio e continuar sua miss\xE3o em
+    busca dos elementos da espada \u2018Puro Sangue\u2019."
+  - "Confio em voc\xEA, Yuna. N\xE3o deixe que obst\xE1culos te impe\xE7am de cumprir
+    seu destino."

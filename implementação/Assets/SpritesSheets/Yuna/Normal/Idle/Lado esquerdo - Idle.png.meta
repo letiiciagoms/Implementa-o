@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 3f9339a629d702e43a1f9958eeb19d9d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8066771137688624394
+    second: Lado esquerdo - Idle_0
+  - first:
+      213: 1001476585286074621
+    second: Lado esquerdo - Idle_1
+  - first:
+      213: -6404182717962701902
+    second: Lado esquerdo - Idle_2
+  - first:
+      213: 7968615451315018218
+    second: Lado esquerdo - Idle_3
+  - first:
+      213: 4495191727290902161
+    second: Lado esquerdo - Idle_4
+  - first:
+      213: -4501561669221615083
+    second: Lado esquerdo - Idle_5
+  - first:
+      213: 2810795563927894982
+    second: Lado esquerdo - Idle_6
+  - first:
+      213: -805854311909876227
+    second: Lado esquerdo - Idle_7
+  - first:
+      213: -4344842589425169738
+    second: Lado esquerdo - Idle_8
+  - first:
+      213: -7767741906050641673
+    second: Lado esquerdo - Idle_9
+  - first:
+      213: 5036657114409532094
+    second: Lado esquerdo - Idle_10
+  - first:
+      213: 2428976858041996970
+    second: Lado esquerdo - Idle_11
+  - first:
+      213: -8272653462367227960
+    second: Lado esquerdo - Idle_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 130
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lado esquerdo - Idle_0
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 7698
+        width: 1089
+        height: 1434
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5047eeb48d4de8e4ca4de0361bcace8d
+      internalID: -1825413276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lado esquerdo - Idle_1
+      rect:
+        serializedVersion: 2
+        x: 4585
+        y: 7698
+        width: 1089
+        height: 1427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3db8c4f6137968f498eda4a017ab2697
+      internalID: 1375938282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lado esquerdo - Idle_2
+      rect:
+        serializedVersion: 2
+        x: 7985
+        y: 7698
+        width: 1089
+        height: 1421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ebf12d60e8c95438e94a5b15ce4831
+      internalID: 1259994940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lado esquerdo - Idle_3
+      rect:
+        serializedVersion: 2
+        x: 11385
+        y: 7698
+        width: 1089
+        height: 1414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c2403b40b977ba41a3172b15056e8e2
+      internalID: -1313396002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lado esquerdo - Idle_4
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 5301
+        width: 1089
+        height: 1421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acaf66a6ebc862a43a69488e4adba9d1
+      internalID: -1369331065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lado esquerdo - Idle_5
+      rect:
+        serializedVersion: 2
+        x: 4585
+        y: 5301
+        width: 1089
+        height: 1421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f64253950ee1f24590e45d88dac0232
+      internalID: 1003800735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lado esquerdo - Idle_6
+      rect:
+        serializedVersion: 2
+        x: 7985
+        y: 5301
+        width: 1089
+        height: 1434
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba46c48132f17194ea933568ef6faf20
+      internalID: 543893620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lado esquerdo - Idle_7
+      rect:
+        serializedVersion: 2
+        x: 11385
+        y: 5301
+        width: 1089
+        height: 1441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32c16e918a70c3b4a98d66aea462d8a7
+      internalID: -188301009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lado esquerdo - Idle_8
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 2898
+        width: 1089
+        height: 1447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d3d412e72457b4793143eeea10a5cb
+      internalID: -1632994264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lado esquerdo - Idle_9
+      rect:
+        serializedVersion: 2
+        x: 4585
+        y: 2898
+        width: 1089
+        height: 1454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80f8f22475ac954483ae917017ee3e1
+      internalID: -575158964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lado esquerdo - Idle_10
+      rect:
+        serializedVersion: 2
+        x: 7985
+        y: 2898
+        width: 1089
+        height: 1447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8f6317ce12a004d90b30255b9eaadf
+      internalID: 460513728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lado esquerdo - Idle_11
+      rect:
+        serializedVersion: 2
+        x: 11385
+        y: 2898
+        width: 1089
+        height: 1444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0becef91cf5cdab4abce272df8ec502a
+      internalID: 1120994657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lado esquerdo - Idle_12
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 501
+        width: 1089
+        height: 1434
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b269754520ac4a64aa32a541a61ca016
+      internalID: 977946733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 09f5001a25d788e49b4d03ea74e42905
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Lado esquerdo - Idle_0: -1825413276
+      Lado esquerdo - Idle_1: 1375938282
+      Lado esquerdo - Idle_10: 460513728
+      Lado esquerdo - Idle_11: 1120994657
+      Lado esquerdo - Idle_12: 977946733
+      Lado esquerdo - Idle_2: 1259994940
+      Lado esquerdo - Idle_3: -1313396002
+      Lado esquerdo - Idle_4: -1369331065
+      Lado esquerdo - Idle_5: 1003800735
+      Lado esquerdo - Idle_6: 543893620
+      Lado esquerdo - Idle_7: -188301009
+      Lado esquerdo - Idle_8: -1632994264
+      Lado esquerdo - Idle_9: -575158964
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

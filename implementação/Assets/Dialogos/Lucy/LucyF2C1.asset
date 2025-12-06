@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3d711f70ea36b34a8451f3815d5a8b0, type: 3}
+  m_Name: LucyF2C1
+  m_EditorClassIdentifier: 
+  sentences:
+  - "Yuna, voc\xEA avan\xE7ou muito bem at\xE9 aqui."
+  - "Mas a pr\xF3xima etapa da sua jornada ser\xE1 desafiadora."
+  - "Para chegar ao vilarejo, voc\xEA precisar\xE1 atravessar a floresta densa, em
+    dire\xE7\xE3o ao norte."
+  - "Cuidado! Existem ciclopes gigantes que s\xF3 podem ser derrotados com tr\xEAs
+    golpes cada."
+  - "Use sua coragem, suas habilidades e o que aprendeu at\xE9 agora para vencer
+    esses inimigos."
+  - "Atravessar a floresta ser\xE1 sua primeira prova nesta fase, mas sei que voc\xEA
+    est\xE1 pronta, Yuna."
+  - "Lembre-se: continue firme e avance at\xE9 o vilarejo. Afrodite est\xE1 sempre
+    com voc\xEA."
