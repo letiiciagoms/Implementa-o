@@ -3,13 +3,17 @@ using UnityEngine.UI;
 
 public class InventarioManager : MonoBehaviour
 {
-    public bool hasGold = false;
-    public bool hasAmetista = false; // nova variável
     public static InventarioManager instance;
+
+    [Header("Flags de Itens Especiais")]
+    public bool hasGold = false;
+    public bool hasAmetista = false;
 
     [Header("UI")]
     public GameObject inventoryUI;
     public InventorySlot[] slots;
+
+    public CommandInvoker invoker = new CommandInvoker(); // Undo global
 
     private void Awake()
     {
@@ -25,7 +29,6 @@ public class InventarioManager : MonoBehaviour
             inventoryUI.SetActive(!inventoryUI.activeSelf);
     }
 
-    // ----------------------- ADICIONAR ITEM NORMAL -----------------------
     public void AddItemToInventory(Sprite itemSprite)
     {
         foreach (InventorySlot slot in slots)
@@ -33,23 +36,7 @@ public class InventarioManager : MonoBehaviour
             if (slot != null && !slot.isFull)
             {
                 slot.AddItem(itemSprite);
-
-                string n = itemSprite.name.ToLower();
-
-                // ----------- DETECTAR OURO -----------
-                if (n.Contains("metal_0")) // <-- SEU SPRITE DE OURO
-                {
-                    hasGold = true;
-                    Debug.Log("OURO detectado: Metal_0");
-                }
-
-                // ----------- DETECTAR AMETISTA -----------
-                if (n.Contains("amm_0")) // <-- SEU SPRITE DE AMETISTA
-                {
-                    hasAmetista = true;
-                    Debug.Log("AMETISTA detectada!");
-                }
-
+                UpdateFlags(itemSprite);
                 return;
             }
         }
@@ -57,48 +44,25 @@ public class InventarioManager : MonoBehaviour
         Debug.Log("Inventário cheio!");
     }
 
-    // ----------------------- ADICIONAR ITEM EXCLUSIVO -----------------------
-    // Limpa todo o inventário antes de adicionar o item (ex: espada)
+    // Adiciona item exclusivo (como espada)
     public void AddUniqueItem(Sprite itemSprite)
     {
-        // Limpa todos os slots
         foreach (InventorySlot slot in slots)
-        {
             slot.ClearSlot();
-        }
 
-        // Reseta flags
         hasGold = false;
         hasAmetista = false;
 
-        // Adiciona a espada no primeiro slot disponível
-        if (slots.Length > 0)
-        {
-            slots[0].AddItem(itemSprite);
-            Debug.Log("Espada adicionada no inventário e outros itens removidos!");
-        }
-    }
+        // Passa null como GameObject porque não existe no mapa
+        ICommand collectCommand = new CollectItemCommand(this, itemSprite, null);
+        invoker.ExecuteCommand(collectCommand);
 
-    public int CountItems(string itemName)
-    {
-        int count = 0;
-
-        foreach (InventorySlot slot in slots)
-        {
-            if (slot.isFull && slot.itemSprite != null)
-            {
-                if (slot.itemSprite.name.ToLower().Contains(itemName.ToLower()))
-                    count++;
-            }
-        }
-
-        return count;
+        Debug.Log("Item exclusivo adicionado via Command!");
     }
 
     public void RemoveItems(string itemName, int amount)
     {
         int removed = 0;
-
         foreach (InventorySlot slot in slots)
         {
             if (removed >= amount) break;
@@ -112,5 +76,39 @@ public class InventarioManager : MonoBehaviour
                 }
             }
         }
+
+        UpdateFlagsAfterRemoval();
+    }
+
+    private void UpdateFlags(Sprite itemSprite)
+    {
+        string n = itemSprite.name.ToLower();
+        if (n.Contains("metal_0")) hasGold = true;
+        if (n.Contains("amm_0")) hasAmetista = true;
+    }
+
+    private void UpdateFlagsAfterRemoval()
+    {
+        hasGold = CountItems("metal_0") > 0;
+        hasAmetista = CountItems("amm_0") > 0;
+    }
+
+    public int CountItems(string itemName)
+    {
+        int count = 0;
+        foreach (InventorySlot slot in slots)
+        {
+            if (slot.isFull && slot.itemSprite != null)
+            {
+                if (slot.itemSprite.name.ToLower().Contains(itemName.ToLower()))
+                    count++;
+            }
+        }
+        return count;
+    }
+
+    public void UndoLastCommand()
+    {
+        invoker.UndoLastCommand();
     }
 }

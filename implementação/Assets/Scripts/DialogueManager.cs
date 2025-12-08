@@ -5,56 +5,37 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    // ============================
-    //      SINGLETON
-    // ============================
-
-    // Instância pública e estática — permite que outros scripts acessem
-    // DialogueManager.instance de qualquer lugar.
     public static DialogueManager instance;
+    
 
-    // ============================
-    //     VARIÁVEIS DE DIÁLOGO
-    // ============================
+    public GameObject dialoguePanel;       
+    public TextMeshProUGUI dialogueText;   
 
-    public GameObject dialoguePanel;       // Painel da UI onde o texto aparece
-    public TextMeshProUGUI dialogueText;   // Texto dentro da caixa de diálogo
-
-    private Queue<string> sentences;       // Fila de frases do diálogo
-    private bool isTyping;                 // Indica se o texto está sendo "digitado"
-    private string currentSentence;        // Armazena a frase atual
+    private Queue<string> sentences;       
+    private bool isTyping;                 
+    private string currentSentence;        
 
     private void Awake()
     {
-        // ======================================
-        //      IMPLEMENTAÇÃO CORRETA DO SINGLETON
-        // ======================================
-
-        // Se já existe um DialogueManager na cena E não é este,
-        // destruímos este objeto para manter apenas um.
+        
         if (instance != null && instance != this)
         {
             Destroy(gameObject);
             return;
         }
 
-        // Caso contrário, este passa a ser a instância oficial.
+       
         instance = this;
-
-        // Se quiser que o DialogueManager continue entre cenas:
-        // DontDestroyOnLoad(gameObject);
-
-        // Inicializando a fila de frases
+        
+        
         sentences = new Queue<string>();
 
-        // Garante que o painel comece fechado
+        
         if (dialoguePanel != null)
             dialoguePanel.SetActive(false);
     }
 
-    // ======================================
-    //           INÍCIO DO DIÁLOGO
-    // ======================================
+    
 
     public void StartDialogue(DialogueObject dialogue)
     {

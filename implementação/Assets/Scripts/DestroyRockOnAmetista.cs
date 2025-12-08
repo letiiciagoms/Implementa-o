@@ -6,18 +6,18 @@ public class DestroyRockOnAmetista : MonoBehaviour
 
     private void Update()
     {
-        // Evita spam ou checar depois de destruir
+        // Evita rodar a lógica depois que a pedra já foi destruída
         if (destroyed) return;
 
-        if (InventarioManager.instance != null)
+        // Garante que o inventário existe
+        if (InventarioManager.instance == null) return;
+
+        // Verifica se o jogador já coletou a ametista
+        if (InventarioManager.instance.hasAmetista)
         {
-            // Checa se o jogador coletou a ametista
-            if (InventarioManager.instance.hasAmetista) // precisa existir no InventarioManager
-            {
-                Debug.Log("Pedra destruída pela ametista!");
-                destroyed = true;
-                Destroy(gameObject);
-            }
+            Debug.Log("Pedra destruída pela ametista!");
+            destroyed = true; // impede chamadas repetidas
+            Destroy(gameObject); // destrói a pedra
         }
     }
 }

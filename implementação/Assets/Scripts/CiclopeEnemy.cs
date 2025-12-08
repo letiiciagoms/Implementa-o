@@ -1,7 +1,5 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
-[RequireComponent(typeof(EnemyHealth))]
 public class CiclopeEnemy : MonoBehaviour
 {
     [Header("Movimentação")]
@@ -80,13 +78,12 @@ public class CiclopeEnemy : MonoBehaviour
         }
     }
 
-    // ----------------------- DANO RECEBIDO -----------------------
     public void TakeDamage(int dmg)
     {
         if (enemyHealth != null)
         {
             enemyHealth.TakeDamage(dmg);
-            animator.SetTrigger("hit"); // se tiver trigger "hit" no Animator
+            animator.SetTrigger("hit"); 
         }
     }
 }

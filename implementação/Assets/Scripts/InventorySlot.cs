@@ -9,7 +9,6 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
     public Sprite itemSprite;
 
     public GameObject ponteNoRio;
-
     private Player player;
 
     private void Start()
@@ -24,14 +23,6 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
         icon.enabled = true;
         icon.preserveAspect = true;
         isFull = true;
-
-        string n = itemSprite.name.ToLower();
-
-        if (n.Contains("metal_0"))
-            InventarioManager.instance.hasGold = true;
-
-        if (n.Contains("amm_0"))
-            InventarioManager.instance.hasAmetista = true;
     }
 
     public void ClearSlot()
@@ -44,68 +35,39 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (!isFull || itemSprite == null)
-            return;
+        if (!isFull || itemSprite == null) return;
 
         string itemName = itemSprite.name.ToLower();
 
-        // -------- BLOQUEIO PERMANENTE DO MACHADO -----------
-        if (itemName.Contains("axe") || itemName.Contains("machado"))
+        // -------- BLOQUEIO MACHADO PERMANENTE --------
+        if ((itemName.Contains("axe") || itemName.Contains("machado")) && player.axePermanentlyRemoved)
         {
-            if (player.axePermanentlyRemoved)
-            {
-                Debug.Log("Machado não pode mais ser equipado.");
-                return;
-            }
-        }
-
-        // -------- PONTE --------
-        if (itemName.Contains("ponte"))
-        {
-            UsarPonte();
+            Debug.Log("Machado não pode mais ser equipado.");
             return;
         }
 
-        // -------- ROSA --------
-        if (itemName.Contains("rosa"))
-        {
-            UsarRosa();
-            return;
-        }
+        // -------- USO DE ITENS --------
+        if (itemName.Contains("ponte")) { UsarPonte(); return; }
+        if (itemName.Contains("rosa")) { UsarRosa(); return; }
+        if (itemName.Contains("maca") || itemName.Contains("maça")) { UsarMaca(); return; }
+        if (itemName.Contains("amm_0")) { UsarAmetista(); return; }
 
-        // -------- MAÇÃ --------
-        if (itemName.Contains("maca") || itemName.Contains("maça"))
-        {
-            UsarMaca();
-            return;
-        }
-
-        // -------- AMETISTA --------
-        if (itemName.Contains("amm_0"))
-        {
-            UsarAmetista();
-            return;
-        }
-
-        // -------- MACHADO --------
+        // -------- EQUIPAR ARMAS --------
         if (itemName.Contains("axe") || itemName.Contains("machado"))
         {
             if (player.weaponType == 1)
                 player.UnequipAllWeapons();
             else
                 player.EquipAxe();
-
             return;
         }
 
-        // -------- ESPADA --------
         if (itemName.Contains("sword") || itemName.Contains("espada"))
         {
             if (player.weaponType == 2)
                 player.UnequipAllWeapons();
             else
                 player.EquipSword();
-
             return;
         }
     }
@@ -114,7 +76,6 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
     {
         if (ponteNoRio != null)
             ponteNoRio.SetActive(true);
-
         ClearSlot();
     }
 
@@ -122,7 +83,6 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
     {
         if (AltarManager.instance != null)
             AltarManager.instance.ColocarRosaEmAltar();
-
         ClearSlot();
     }
 
@@ -130,7 +90,6 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
     {
         if (AltarManager.instance != null)
             AltarManager.instance.ColocarMacaEmAltar();
-
         ClearSlot();
     }
 
@@ -138,9 +97,7 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
     {
         if (AltarManager.instance != null)
             AltarManager.instance.AtivarAmetista();
-
         InventarioManager.instance.hasAmetista = true;
-
         ClearSlot();
     }
 }
