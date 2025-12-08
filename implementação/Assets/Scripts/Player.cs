@@ -36,6 +36,8 @@ public class Player : MonoBehaviour
     public Image heartIcon;
     public TMP_Text healthText;
 
+    public ParticleSystem Poeira;
+
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
@@ -70,6 +72,7 @@ public class Player : MonoBehaviour
         {
             animator.SetFloat("HorizontalIdle", movimento.x);
             animator.SetFloat("VerticalIdle", movimento.y);
+            Poeira.Play();
         }
 
         animator.SetInteger("WeaponType", weaponType);

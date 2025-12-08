@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class HeartPickup : MonoBehaviour
 {
-    public GameObject heart;
-    public int healAmount = 1; // cura 1 ponto de vida
+    public HeartItemSO itemData; // referência ao ScriptableObject
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,13 +12,22 @@ public class HeartPickup : MonoBehaviour
 
             if (player != null)
             {
-                player.Heal(healAmount);
+                // usa o valor vindo do ScriptableObject
+                player.Heal(itemData.healAmount);
             }
-            
-            GameObject preFab = Instantiate(heart, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z), Quaternion.identity);
-            Destroy(preFab.gameObject, 1f);
-            Destroy(gameObject); // some ao coletar
+
+            // instancia partícula ou efeito do ScriptableObject
+            if (itemData.collectEffect != null)
+            {
+                GameObject effect = Instantiate(
+                    itemData.collectEffect,
+                    transform.position,
+                    Quaternion.identity
+                );
+                Destroy(effect, 1f);
+            }
+
+            Destroy(gameObject);
         }
     }
 }
-
